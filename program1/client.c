@@ -21,7 +21,7 @@ int main(int argc, char *argv[])
         exit(0);
 
     address.sin_family = AF_INET;
-    address.sin_port = htons(15000);
+    address.sin_port = htons(15002);
     inet_pton(AF_INET, argv[1], &address.sin_addr);
 
     if (connect(create_socket, (struct sockaddr *)&address, sizeof(address)) == 0)
